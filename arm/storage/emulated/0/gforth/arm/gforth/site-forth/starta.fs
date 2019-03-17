@@ -1,6 +1,19 @@
 \ /storage/emulated/0/gforth/arm/gforth/site-forth/starta.fs
 
 \ startup stuff
+
+0 [IF]
+
+  March 17, 2019
+
+  The file, '/storage/emulated/0/gforth/arm/gforth/site-forth/siteinit.fs'
+  is also present on the system (and was created by gforth,
+  during installation).
+
+  It is used, unmodified, here.
+
+[THEN]
+
 \ Copyright (C) 2015,2014,2016,2017,2018 Free Software Foundation, Inc.
 
 \ This file is part of Gforth.
