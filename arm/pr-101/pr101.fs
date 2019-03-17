@@ -1,11 +1,15 @@
-\ ." here we are inside pr101.fs" cr
+\ pr101.fs
 
-222 133 99 88 55 $3e .s
+211 188 77 66 44 $3a .s
 
-."  17 Mar 01:55 UTC" cr
+."  17 Mar 04:57 UTC" cr
 
-\ ." non-locally modded." cr
-." words:  bwf - basic workflow" cr cr
+." words:  bwf   - basic workflow"    cr
+."         tryaa - something to try"  cr
+."         ncr   - cr n times"        cr cr
+
+: ncr ( n -- ) \ emit: cr x n
+  for cr next ;
 
 : bwf cr cr ( -- )
 
@@ -17,6 +21,13 @@
     ."   3. arm: filemgr: rename existing file" cr
     ."   4. arm: FastHub: download revised .fs" cr
     ."   5. arm: gforth:  test" cr ;
+
+: tryaa cr ( -- )
+    ." Try this:" cr cr
+    ." 91 27 emit emit "
+    ." 56 emit "         \  '8'     48:0 49:1 50:2 .. 57:9 here
+\   ." 48 49 emit emit " \ '10'     gives 'ESC[10A' in output to terminal (move up 10 lines)
+    ." 65 emit cr 70 spaces 7 ncr" cr ;
 
 0 [IF]
 \ comment
