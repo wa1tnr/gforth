@@ -30,5 +30,9 @@
     ." 65 emit cr 70 spaces 7 ncr" cr ;
 
 0 [IF]
-\ comment
+    RESULT: works on Linux PC host because ansi.sys (vt220?) style escapes work there.
+            doesn't work on gforth running on the arm handheld, because that
+            environment uses a different screen/terminal emulation.
+
+            Instead, gforth/arm shows the escape codes on-screen.
 [THEN]
